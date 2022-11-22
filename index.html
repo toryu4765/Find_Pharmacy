@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html lang="ko">
+<meta charset="utf-8">
+
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/77e29b57dd.js" crossorigin="anonymous"></script>
+    <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=362853b7cabb2b651be4b338c50600c6&libraries=services,clusterer">
+    </script>
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
+    </script>
+
+    <script type="text/javascript" defer src="js/sebindex.js"></script>
+    <script type="text/javascript" defer src="js/index.js"></script>
+
+
+
+    <link rel="shortcut icon" type="image/x-icon" href="img/pharmacy.ico">
+    <link href="css/style.css" rel="stylesheet">
+    <title> 서울특별시 약국 정보 </title>
+</head>
+
+<body style="overflow-x:hidden; overflow-y:auto;">
+
+    <div id="wrap">
+        <header>
+
+            <nav class="navbar">
+
+                <div class="navbar-logo">
+
+
+                    <a href="">서울특별시 약국 정보</a>
+
+                </div>
+
+                <ul class="navbar-menu">
+                    <li><a href="">약국홈페이지소개</a></li>
+                    <li><a href="">약국정보</a></li>
+                    <li><a href="">공지사항</a></li>
+                    <li><a href="">1:1문의</a></li>
+                    <li><a href="">응급처치방법</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <article id="apiweb">
+            <div class="time"> 현재시간은?</div>
+            <div class="recode">
+                <h1 id="clock"> 00: 00: 00</h1>
+            </div>
+            <button type="button" class="btn" onclick="getCurrentPosBtn()" style='cursor:pointer'> 내 위치 확인하기 </button>
+            <button type="button" class="btn2" onclick="addMarker()" style='cursor:pointer'> 실시간 약국현황  </button>
+        </article>
+        <div id="menu_wrap" class="bg_white">
+        </div>
+        <footer>
+
+        </footer>
+    </div>
+    <div class="map_wrap">
+        <div id="map" style="width:100%;height:120%;position:relative;overflow:hidden;"></div>
+
+        <div id="menu_wrap" class="bg_white">
+            <div class="option">
+                <div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+
+</body>
+
+</html>
