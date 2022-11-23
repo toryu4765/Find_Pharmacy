@@ -46,6 +46,21 @@ $.get("data/cat.json", function(data) {
 
 });
 
+// 인포윈도우를 표시하는 클로저를 만드는 함수입니다 
+function makeOverListener(map, marker, infowindow) {
+    return function() {
+        infowindow.open(map, marker);
+    };
+}
+
+// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
+function makeOutListener(infowindow) {
+    return function() {
+        infowindow.close();
+    };
+}
+
+
 
 // 마커 클러스터러에 클릭이벤트를 등록합니다
 // 마커 클러스터러를 생성할 때 disableClickZoom을 true로 설정하지 않은 경우
@@ -59,19 +74,7 @@ kakao.maps.event.addListener(clusterer, 'clusterclick', function(cluster) {
     map.setLevel(level, { anchor: cluster.getCenter() });
 });
 
-function makeOverListener(map, marker, infowindow) {
-    infowindow.close();
-    return function() {
-        infowindow.open(map, marker);
-    };
-}
 
-// 인포윈도우를 닫는 클로저를 만드는 함수입니다 
-function makeOutListener(infowindow) {
-    return function() {
-        infowindow.close();
-    };
-}
 
 
 var infoTitle = document.querySelectorAll('.info-title');
