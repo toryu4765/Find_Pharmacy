@@ -7,7 +7,6 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans+KR&display=swap" rel="stylesheet">
-    <script src="https://kit.fontawesome.com/77e29b57dd.js" crossorigin="anonymous"></script>
     <script type="text/javascript" src="https://dapi.kakao.com/v2/maps/sdk.js?appkey=362853b7cabb2b651be4b338c50600c6&libraries=services,clusterer">
     </script>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js">
@@ -41,8 +40,8 @@
                     <li><a href="">약국홈페이지소개</a></li>
                     <li><a href="">약국정보</a></li>
                     <li><a href="">공지사항</a></li>
+                    <li><a href="board/list.html">게시판</a></li>
                     <li><a href="">1:1문의</a></li>
-                    <li><a href="">응급처치방법</a></li>
                 </ul>
             </nav>
         </header>
@@ -52,26 +51,108 @@
             <div class="recode">
                 <h1 id="clock"> 00: 00: 00</h1>
             </div>
-            <button type="button" class="btn" onclick="getCurrentPosBtn()" style='cursor:pointer'> 내 위치 확인하기 </button>
-            <button type="button" class="btn2" onclick="addMarker()" style='cursor:pointer'> 실시간 약국현황  </button>
+            <form action="">
+                <div class="search">
+                    <input type="text" name="query" value="약국을 검색하세요">
+                    <button type="submit" onclick="btnsearch_click()">검색</button>
+                </div>
+                <button type="button" class="btn" onclick="getCurrentPosBtn()" style='cursor:pointer'> 내 위치 확인하기 </button>
+                <button type="button" class="btn2" onclick="addMarker()" style='cursor:pointer'> 실시간 약국현황  </button>
         </article>
         <div id="menu_wrap" class="bg_white">
         </div>
-        <footer>
 
-        </footer>
     </div>
     <div class="map_wrap">
-        <div id="map" style="width:100%;height:120%;position:relative;overflow:hidden;"></div>
+        <div id="map"></div>
 
-        <div id="menu_wrap" class="bg_white">
-            <div class="option">
-                <div>
+        <div id="white"></div>
+
+        <article id="icon_area">
+            <h2> HOW IT PHARMACY </h2>
+            <div id="area">
+                <ul>
+                    <li>
+
+                        <img src="img/icon1.png" alt="1">
+                        <h5> FlND PHARMACY </h5>
+                        <p>Lorem ipsum dolor sit amet consecteur <br> adipsicing elit.</p>
+
+                    </li>
+                    <li>
+                        <img src="img/icon2.png" alt="2">
+                        <h5> BUY PROPERYTY </h5>
+                        <p>Lorem ipsumdolor sit amet consectetur <br>adipsicing elit </p>
+
+                    </li>
+                    <li>
+                        <img src="img/icon3.png" alt="3">
+                        <h5>OUTSTANDING HOUSES </h5>
+                        <p>Lorem ipsum dolor sit amet consectetur <br> adipising elit </p>
+
+                    </li>
+
+
+
+                </ul>
+            </div>
+        </article>
+
+        <footer>
+            <div id="foot">
+                <div class="hand">
+                    <div class="finger">
+                        PHARMACY
+
+                    </div>
+                    <div class="subtitle">
+                        Lorem ipsum dolor sit amet, </br> consectetur adipiscing elit, sed
+                    </div>
+                    <div class="end">
+                        © 2022 blog, Inc.
+                    </div>
+                </div>
+                <div class="drx">
+                    <div class="deft">
+                        MEMU
+                    </div>
+                    <div class="beryl">
+                        About us </br>
+                        Contacts</br>
+                        Tems & Condition</br>
+                        Privacy Policy</br>
+                    </div>
+                </div>
+                <div class="geng">
+                    <div class="chovy">
+                        FOLLOW US
+                    </div>
+                    <div class="ruler">
+                        <a href="https://www.facebook.com/" target="_blank">  Facebook</br> </a>
+                        <a href="https://twitter.com/" target="_blank"> Twitter</br> </a>
+                        <a href="https://www.instagram.com/" target="_blank"> Instargram</br> </a>
+                        <a href="index.html" target="_blank"> Rss </br> </a>
+                    </div>
+                </div>
+                <div class="t1">
+                    <div class="faker">
+                        NEW SLETTER
+                    </div>
+                    <div class="keria">
+                        Suspendisse handrerit tellus
+                    </div>
+                    <div class="letter">
+                        <input type="text" placeholder="Search for...">
+                        <div class="lastline"></div>
+                        <button type="button" class="bts" onclick="alert('success')" style='cursor:pointer'><img src="img/kakao.png"></button>
+                    </div>
+
                 </div>
             </div>
-
-        </div>
+        </footer>
     </div>
+
+
 
 
 </body>
